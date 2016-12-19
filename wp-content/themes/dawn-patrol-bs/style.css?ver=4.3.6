@@ -1,0 +1,563 @@
+/*
+Theme Name: BootstrapWP
+Theme URI: http://bootstrapwp.rachelbaker.me
+Author: Rachel Baker
+Author URI: http://www.rachelbaker.me
+Description: A semantic HTML/CSS framework base theme for WordPress Developers ported from Twitter Bootstrap
+Version: 1.0
+=======
+License: GNU General Public License
+License URI: license.txt
+
+This theme, like WordPress, is licensed under the GPL.
+
+The development of BootstrapWP was powered by Sublime Text 2 and lots of Diet Coke.
+Use this starter theme to make something cool.  Please share the results with me via Twitter @rachelbaker.
+Enjoy!
+
+*/
+/********************************************************
+
+Comfortable with LESS?  Check out the /assets/css/less folder where the bootstrapwp.less file is the master complier
+
+Not comfortable with LESS?  You can override the compiled bootstrapwp.css file by adding custom styles here.
+-------------------------------------------------- */
+
+
+/* Dev Mode ================= */
+#wpadminbar {
+  display: none;
+}
+html {
+    margin-top: 0px !important;
+}
+
+/* Fonts & Typography ================= */
+@import url(https://fonts.googleapis.com/css?family=Monda:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+body {
+  font-family: 'Monda', sans-serif;
+  background: #7c8186;
+	/* background: #e3a518; */
+}
+
+h1 {
+  font-size: 4.8em;
+  line-height: 1.1em;
+}
+.thin {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+}
+
+.subtitle {
+  font-weight: 200;
+  padding: 10px 30px;
+  background: rgba(255,255,255,.6);
+  color: rgba(0,0,0,.5);
+  float: left;
+  -webkit-border-radius: 2px;	
+          border-radius: 2px;	
+}
+
+.sub_yellow {
+  background: rgba(248,175,9,.6);
+  color: #fff;
+}
+
+
+/* elements ================= */
+.circle {
+  -webkit-border-radius: 50%;	
+          border-radius: 50%;	
+}
+.btn {
+  border-width: 0px;    
+  -webkit-box-shadow: inset 0 2px 0 rgba(255,255,255,.2), 0 3px 1px rgba(0,0,0,0.07);
+  -moz-box-shadow: inset 0 2px 0 rgba(255,255,255,.2), 0 3px 1px rgba(0,0,0,.07);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.2), 0 3px 1px rgba(0,0,0,.07);
+}
+.btn-primary {
+  background-color: #e3a518;
+  background-image: none;
+}
+.btn-primary:hover {
+  background-color: #d39914;
+}
+.btn-large {
+  padding: 16px 24px;
+  font-size: 24px;
+}
+
+/* ONE PAGE ================= */
+.bgImage,
+.bgImage_new {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bgImage {
+  z-index: 0;
+}
+.bgImage_new {
+  z-index: 1;
+}
+#fullpage {
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+.section{
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+header {
+  background: rgba(0,0,0,.65);
+	position:fixed;
+	top:0;
+	left:0;
+	height: 44px;
+	z-index: 70;
+	width: 100%;
+}
+#currentSection {
+  display: none;
+}
+
+#menu li {
+	display:inline-block;
+	margin: 0 20px 0 0;
+}
+#menu li.active a {
+	border-bottom: 2px solid #e3a518;
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: rgba(255,255,255,.7);
+	font-size: 15px;
+}
+#menu li.active a:hover{
+	//color: #000;
+}
+#menu li:hover{
+}
+#menu li a,
+#menu li.active a{
+	padding: 12px 0 4px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position: relative;
+	padding: 0;
+	margin:0;
+}
+
+/* Line Up ---------------- */
+#section2 h1 {
+  margin-bottom: 40px;
+}
+#section2 .circle {
+  float: left;
+  width: 25%;
+}
+#section2 .name,
+#section2 .title {
+  margin-left: 30%;
+}
+#section2 h2.thin {
+  margin-bottom: 5px;
+  font-size: 42px;
+}
+#section2 h4.title {
+  margin-top: 0px;
+  color: #333;
+}
+#section2 p {
+  color: #333;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+.borderTop {
+  border-top: 1px solid #333;
+  margin-top: 22px;
+}
+.verizon_logo {
+  height: 20px;
+  margin: -9px 0 0;
+}
+.aol_logo {
+  height: 18px;
+  margin: -9px 0 0;
+}
+.lineup_footer {
+  margin-top: 20px;
+}
+.lineup_logos {
+  padding: 20px 0 80px;
+}
+
+/* Our Approach ---------------- */
+#section4 small {
+  color: #fff;
+}
+#section4 h2.subtitle.sub_yellow {
+  position: relative;
+  margin: 0 0 30px 40px;
+  padding: 20px 40px 20px 60px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+#section4 img {
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  height: 80px;
+}
+#section4 h3.thin {
+  margin-top: 20px;
+}
+
+/* Repsonsive ================= */
+
+
+@media (max-width: 1200px) {
+  /* Our Approach --------------- */
+  .access small {
+    display: block;
+  }
+}
+
+@media (max-width: 980px) {
+  #section2 h2.thin {
+    font-size: 33px;
+  }
+  /* Our Focus --------------- */
+  #section3 h1.subtitle.sub_yellow {
+    font-size: 3.6em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* Repsonsive ================= */
+@media (max-width: 767px) {
+  .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  
+  /* Mobile Nav */
+  header {
+    height: 40px;
+  }
+  header .container {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  #currentSection {
+    display: block;
+    float: left;
+    color: #fff;
+    margin: 0;
+    padding: 0 0 0 15px;
+    line-height: 40px;
+    vertical-align: middle;
+    font-weight: 200;
+  }
+  #menu {
+    margin: 0 auto;
+    max-width: 170px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 3px;
+  }
+  #menu li {
+    line-height: 13px;
+    margin: 10px 10px 0 0;
+    height: 40px;
+  }
+  #menu li a { 	
+  	width: 15px;
+  	height: 0px;
+  	background: rgba(255,255,255,.5);
+  	overflow: hidden;
+  	padding: 15px 0 0 0;
+  	display: block;
+  	border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  #menu li.active a {
+   background: #e3a518;
+   border-bottom: none;
+   padding: 15px 0 0 0;
+  }
+  
+  /* Typography --------------- */
+  h1 {
+    font-size: 3.8em;
+    line-height: 1.1em;
+  }
+  
+  /* Our Line Up --------------- */
+  #section2 h1 {
+    margin-bottom: 20px;
+  }
+  #section2 .clearfix {
+    display: none;
+  }
+  #section2 .circle {
+    width: 15%;
+  } 
+  #section2 .name, 
+  #section2 .title,
+  #section2 .bio {
+    margin-left: 20%;
+  }
+  #section2 .bio {
+    color: #040404;
+  }
+  .lineup_footer {
+    margin-top: 0px;
+  }
+  .lineup_logos {
+    padding: 0;
+  }
+  .lineup_logos .span3,
+  .lineup_footer .borderTop {
+    display: none;
+  }
+  #section2 .bio_divider {
+    min-height: 10px;
+  }
+  .lineup_footer .span6 {
+    background: rgba(0,0,0,.5);
+    padding: 10px;
+    margin-top: 20px;
+  }
+  #section2 .lineup_footer .span6 p {
+    color: rgba(255,255,255,.8);
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .lineup_logos .span6 {
+    background: rgba(255,255,255,.5); 
+    padding: 10px; 
+    margin-top: 20px; 
+  }
+  .verizon_logo {
+    height: 16px;
+    margin: -7px 0 0;
+  }
+  .aol_logo {
+    height: 15px;
+    margin: -7px 0 0;
+  }
+  #section2 .lineup_logos .span6 p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+/* iPhone 6+ ===================== */
+@media (max-width: 414px) {
+  h1.heading {
+    display: none;
+  }
+  /* What We Do --------------- */
+  #section1 h1 {
+    font-size: 2em;
+  }
+  #section1 h2 {
+    font-size: 2em;
+    line-height: 1.1em;  
+  }
+  /* Our Line Up --------------- */
+  #section2 .clearfix {
+    display: block;
+  }
+  #section2 .bio {
+    margin-left: 0%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  #section2 .circle {
+    width: 20%;
+  } 
+  #section2 .name, 
+  #section2 .title {
+    margin-left: 25%;
+  }
+  /* Our Focus --------------- */
+  #section3 h1.subtitle.sub_yellow {
+    font-size: 3em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #section3 h2.subtitle {
+    font-size: 2em;
+    line-height: 1.3em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  } 
+  /* Our Approach --------------- */
+  #section4 h3.thin {
+    margin-top: 10px;
+  }
+  h2.subtitle.sub_yellow small {
+    display: block;
+    line-height: 22px;
+    font-size: 18px;
+  }
+  #section4 h2.subtitle.sub_yellow {
+    position: relative;
+    margin: 0 0 20px 30px;
+    padding: 15px 30px 15px 40px;
+    line-height: 30px;
+    vertical-align: middle;
+  }
+  #section4 img {
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    height: 60px;
+  }
+}
+
+/* iPhone 6 ===================== */
+@media (max-width: 375px) {
+  
+  /* Our Line Up --------------- */
+  #section2 h2.thin {
+      margin-bottom: 0px;
+      font-size: 35px;
+  } 
+  
+  /* Our Focus --------------- */
+  #section3 h1.subtitle.sub_yellow {
+    font-size: 2.8em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  #section3 h2.subtitle {
+    font-size: 1.8em;
+    line-height: 1.1em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* Our Approach --------------- */
+  h2.top_par {
+    font-size: 1.8em;
+    line-height: 1.2em;
+  }
+  #section4 h3.thin {
+    font-size: 18px;
+  }
+
+}
+
+
+/* iPhone 5 ===================== */
+@media (max-width: 320px) {
+
+  #menu {
+    margin-right: 5px;
+  }
+  
+  /* What We Do --------------- */
+  #section1 h2 {
+    font-size: 1.8em;
+    line-height: 1em;  
+  }
+  
+  /* Our Line Up --------------- */
+  #section2 h2.thin {
+    font-size: 30px;
+  }
+  #section2 h4.title {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  #section2 .bio {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .lineup_footer .span6 {
+    padding: 6px;
+    margin-top: 10px;
+    background: rgba(0,0,0,.6);
+  }
+  #section2 .lineup_footer .span6 p {
+    font-size: 13px;
+    line-height: 17px;
+  }
+  .lineup_logos .span6 { 
+    padding: 4px; 
+    margin-top: 10px; 
+  }
+  .verizon_logo {
+    height: 13px;
+    margin: -6px 0 0;
+  }
+  .aol_logo {
+    height: 12px;
+    margin: -5px 0 0;
+  }
+  #section2 .lineup_logos .span6 p {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  /* Our Focus --------------- */
+  #section3 h1.subtitle.sub_yellow {
+    font-size: 2.2em;
+  }
+  
+  /* Our Approach --------------- */
+  #section4 h3.thin {
+    margin-top: 10px;
+  }
+  h2.subtitle.sub_yellow small {
+    display: block;
+    line-height: 20px;
+    font-size: 16px;
+  }
+  #section4 h2.subtitle.sub_yellow {
+    position: relative;
+    margin: 0 0 15px 25px;
+    padding: 12px 30px 12px 32px;
+    line-height: 26px;
+    vertical-align: middle;
+    font-size: 28px;
+  }
+  #section4 img {
+    position: absolute;
+    top: 0px;
+    left: -25px;
+    height: 50px;
+  }
+  h2.top_par {
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+  
+}
